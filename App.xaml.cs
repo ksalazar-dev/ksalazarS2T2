@@ -5,11 +5,8 @@
         public App()
         {
             InitializeComponent();
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new Views.sinicio());
+        
+            MainPage = new NavigationPage(new Views.login());
         }
     }
 }
