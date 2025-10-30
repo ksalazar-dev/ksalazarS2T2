@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ksalazarS2T2.Views.sinicio"
+             Title="Sistema de Calificaciones UISRAEL">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Estudiante:" FontAttributes="Bold" />
+            <Picker x:Name="pickerEstudiante"
+                    Title="Seleccione un estudiante">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>María Torres</x:String>
+                        <x:String>José Pérez</x:String>
+                        <x:String>Andrea López</x:String>
+                        <x:String>Juan García</x:String>
+                        <x:String>Carla Flores</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="--- PARCIAL 1 ---" FontAttributes="Bold" />
+            <Entry x:Name="txtSeg1" Placeholder="Nota Seguimiento 1 (0-10)" Keyboard="Numeric" TextChanged="SoloNumeros"/>
+            <Entry x:Name="txtExa1" Placeholder="Examen 1 (0-10)" Keyboard="Numeric" TextChanged="SoloNumeros"/>
+
+            <Label Text="--- PARCIAL 2 ---" FontAttributes="Bold" />
+            <Entry x:Name="txtSeg2" Placeholder="Nota Seguimiento 2 (0-10)" Keyboard="Numeric" TextChanged="SoloNumeros"/>
+            <Entry x:Name="txtExa2" Placeholder="Examen 2 (0-10)" Keyboard="Numeric" TextChanged="SoloNumeros"/>
+
+            <DatePicker x:Name="dateFecha" />
+
+            <Button Text="Calcular Nota Final"
+                    Clicked="btnCalcular_Clicked"
+                    BackgroundColor="#0066CC"
+                    TextColor="White"
+                    CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>
